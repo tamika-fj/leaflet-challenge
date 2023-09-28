@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leaflet Step-1</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  
+  <style>
+    /* Define CSS styles for the legend container */
+    .legend {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      z-index: 1000;
+    }
+  
+    /* Define CSS styles for legend squares */
+    .legend-sq {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- The div that holds our map -->
+  <div id="map"></div>
+
+  <div id="legend" class="legend">
+    <h4>Depth where earthquake rupture began (km)</h4>
+    <div><span class="legend-sq" style="background-color: #ffcc66;"></span>10 km or less</div>
+    <div><span class="legend-sq" style="background-color: #ff7733;"></span>30 km or less</div>
+    <div><span class="legend-sq" style="background-color: #ff6666;"></span>50 km or less</div>
+    <div><span class="legend-sq" style="background-color: #e6004c;"></span>70 km or less</div>
+    <div><span class="legend-sq" style="background-color: #600080;"></span>90 km or less</div>
+    <div><span class="legend-sq" style="background-color: #400080;"></span>More than 90 km</div>
+  </div>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  <!-- D3 JavaScript -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/logic.js"></script>
+</body>
+
+</html>
